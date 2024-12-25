@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Recommendation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Crop Recommendation System</h1>
+        <form action="/predict" method="post">
+            {% for feature in features %}
+                <div class="input-container">
+                    <label for="{{ feature }}">{{ feature }}</label>
+                    <input type="text" id="{{ feature }}" name="{{ feature }}" required>
+                </div>
+            {% endfor %}
+            <button type="submit" class="submit-button">Predict</button>
+        </form>
+    </div>
+</body>
+</html>

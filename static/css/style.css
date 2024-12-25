@@ -1,0 +1,146 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Take full viewport height */
+    box-sizing: border-box; /* Include padding in width/height calculations */
+}
+
+.container {
+    text-align: center;
+    padding: 15px; /* Reduced padding */
+    max-width: 900px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin: 0 10px; /* Adjusted horizontal margin */
+    overflow-y: auto; /* Allow scrolling if content exceeds height */
+    max-height: 90vh; /* Ensure container doesn't exceed viewport height */
+}
+
+h1 {
+    color: #4caf50;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 14px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #4caf50;
+    outline: none;
+}
+
+label {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    display: block;
+    text-align: left;
+}
+
+.submit-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 14px 25px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 85%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    color: #4caf50;
+    text-decoration: none;
+    border: 2px solid #4caf50;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #4caf50;
+    color: white;
+}
+
+/* Input Container */
+.input-container {
+    margin: 15px 0;
+}
+
+/* Result Page Specific */
+.result-container {
+    max-width: 1000px;
+    text-align: center;
+}
+
+.image-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.image-container img {
+    width: 70%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+/* Styling for crop name */
+.crop-name {
+    color: #ff5722; /* Distinct bright color */
+    font-weight: bold;
+    font-size: 2rem;
+    text-transform: uppercase; /* All caps */
+    letter-spacing: 2px; /* Adding space between letters for effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px; /* Further reduced padding for smaller screens */
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    input[type="text"] {
+        width: 100%;
+    }
+
+    .submit-button {
+        width: 100%;
+    }
+
+    .back-button {
+        width: 100%;
+    }
+}
